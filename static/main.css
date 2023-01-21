@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    gap: 5vh;
+}
+
+.zaglavlje {
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputi {
+    width: 90%;
+    border: 1px solid black;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputi p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: 5vh;
+    width: 500px;
+}
+
+.inputi input {
+    border: 1px solid black;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.title_input {
+    width: 300px;
+}
+
+.description_input {
+    width: 300px;
+    height: 200px !important;
+}
+
+.dodaj_dugme {
+    width: 100px;
+}
+
+/* p input {
+    width: 100px;
+    border-radius: 20px;
+} */
