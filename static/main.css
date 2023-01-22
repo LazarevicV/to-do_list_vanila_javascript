@@ -40,6 +40,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
+    background-color: darkcyan;
 }
 
 .inputi p {
@@ -55,6 +57,7 @@ body {
     border: 1px solid black;
     height: 30px;
     border-radius: 20px;
+    padding: 1vh;
 }
 
 .title_input {
@@ -70,7 +73,93 @@ body {
     width: 100px;
 }
 
-/* p input {
+a {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
     width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px;
-} */
+}
+
+a:hover {
+    background-color: darkcyan;
+    color: white;
+}
+
+.all_notes {
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vh;
+}
+
+.note {
+    width: 30%;
+    border: 1px solid black;
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* border-radius: 10px; */
+    background-color: #F5F5DC;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px #888888;
+}
+
+.note_title {
+    /* font-size: 3vh; */
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.note_description {
+    height: 100px;
+    margin-top: 2vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1vh;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    font-size: 2vh;
+    text-transform: capitalize;
+}
+
+.note_date {
+    margin-top: 2vh;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+
+.high_note {
+    background-color: lightcoral;
+}
+
+.medium_note {
+    background-color: rgb(255, 255, 44);
+}
+
+.povecaj_malo_link {
+    width: 150px;
+}
+
+.low_note {
+    background-color: lightblue;
+}
+
+.none_note {
+    background-color: gray;
+}
