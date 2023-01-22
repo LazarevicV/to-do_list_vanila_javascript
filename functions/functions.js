@@ -18,12 +18,21 @@ upisi_u_local_storage = (title, description, date, important) => {
 }
 
 ucitaj_podatke = () => {
-  title = document.getElementById('title')
-  description = document.getElementById('description')
-  date = document.getElementById('date')
-  important = document.getElementById('important')
+  let title = document.getElementById('title')
+  let description = document.getElementById('description')
+  let date = document.getElementById('date')
+  let radioButtons = document.getElementsByName('important')
 
-  upisi_u_local_storage(title.value, description.value, date.value, important.value)
+  var important
+
+  for (let i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked) {
+      important = radioButtons[i].value
+    }
+  }
+
+  upisi_u_local_storage(title.value, description.value, date.value, important)
+  console.log(title.value, description.value, date.value, important);
 }
 
 dodaj_dugme = document.getElementById('dodaj_dugme')
