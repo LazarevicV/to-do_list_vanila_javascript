@@ -62,11 +62,15 @@ body {
 
 .title_input {
     width: 300px;
+    word-wrap:break-word;
+    white-space: pre-wrap;
 }
 
 .description_input {
     width: 300px;
     height: 200px !important;
+    border-radius: 20px;
+    padding: 1vh;
 }
 
 .dodaj_dugme {
@@ -83,6 +87,7 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+    margin-bottom: 5vh;
 }
 
 a:hover {
@@ -163,3 +168,45 @@ a:hover {
 .none_note {
     background-color: gray;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        gap: 0;
+        width: 100%;
+    }
+
+    .zaglavlje {
+        width: 95%;
+    }
+
+    .inputi {
+        width: 100%;
+        border-radius: 0px;
+        border: 0;
+    }
+
+    .inputi p {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .radio_flex_direction {
+        width: auto;
+        display: block;
+    }
+
+    .radio_flex_direction input {
+        width: 50px;
+    }
+
+    .all_notes {
+        flex-wrap: wrap;
+    }
+
+    .note {
+        margin-left: 2vh;
+        width: 80%;
+    }
+  }
