@@ -54,7 +54,7 @@ body {
 }
 
 .inputi input {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 30px;
     border-radius: 20px;
     padding: 1vh;
@@ -221,5 +221,9 @@ a:hover {
     .note {
         margin-left: 2vh;
         width: 80%;
+    }
+
+    .dodaj_dugme {
+        height: 50px !important;
     }
   }

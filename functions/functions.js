@@ -40,5 +40,5 @@ dodaj_dugme = document.getElementById('dodaj_dugme')
 dodaj_dugme.addEventListener('click', function dodaj_dugme_klik(e) {
   e.preventDefault()
   ucitaj_podatke()
-  location.reload()
+  window.location.href = "all_notes.html"
 })
