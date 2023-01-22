@@ -12,6 +12,7 @@ var all_notes_div = document.getElementById('all_notes')
 // console.log(note_array);
 
 dodaj_sve_beleske = () => {
+  var brojac = 0
   for (let note of note_array) {
     console.log(note[3]);
     date = note[2].split('-')
@@ -26,6 +27,7 @@ dodaj_sve_beleske = () => {
           <p class="note_title">${note[0]}</p>
           <p class="note_description">${note[1]}</p>
           <p class="note_date">${day}/${month}/${year}</p>
+          <p class="obrisi_note" id="obrisi_note_${brojac}">Delete</p>
         </div>
       `
     } 
@@ -35,6 +37,7 @@ dodaj_sve_beleske = () => {
           <p class="note_title">${note[0]}</p>
           <p class="note_description">${note[1]}</p>
           <p class="note_date">${day}/${month}/${year}</p>
+          <p class="obrisi_note" id="obrisi_note_${brojac}">Delete</p>
         </div>
       `
     }
@@ -44,6 +47,7 @@ dodaj_sve_beleske = () => {
           <p class="note_title">${note[0]}</p>
           <p class="note_description">${note[1]}</p>
           <p class="note_date">${day}/${month}/${year}</p>
+          <p class="obrisi_note" id="obrisi_note_${brojac}">Delete</p>
         </div>
       `
     }
@@ -53,10 +57,26 @@ dodaj_sve_beleske = () => {
           <p class="note_title">${note[0]}</p>
           <p class="note_description">${note[1]}</p>
           <p class="note_date">${day}/${month}/${year}</p>
+          <p class="obrisi_note" id="obrisi_note_${brojac}">Delete</p>
         </div>
       `
     }
+    brojac++
   }
 }
 
 dodaj_sve_beleske()
+
+const deleteButtons = document.querySelectorAll("[id^='obrisi_note_']")
+
+deleteButtons.forEach(button => {
+  button.addEventListener('click', event => {
+    const memberDiv = event.target.parentNode
+    memberDiv.remove()
+    obrisi_id = event.target
+    var id_note = event.target.id.split('_')[1]
+    note_array.splice(id_note, 1)
+    localStorage.setItem('notes', JSON.stringify(note_array))
+    location.reload()
+  })
+})
