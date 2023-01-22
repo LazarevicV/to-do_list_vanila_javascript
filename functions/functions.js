@@ -11,7 +11,6 @@ if (localStorage.getItem('notes') != null) {
 console.log(note_array);
 
 upisi_u_local_storage = (title, description, date, important) => {
-  // console.log(title, description, date, important)
   note = [title, description, date, important]
   console.log(note);
   note_array.push(note)
@@ -23,8 +22,6 @@ ucitaj_podatke = () => {
   description = document.getElementById('description')
   date = document.getElementById('date')
   important = document.getElementById('important')
-  
-  // console.log(title.value, description.value, date.value, important.value);
 
   upisi_u_local_storage(title.value, description.value, date.value, important.value)
 }
