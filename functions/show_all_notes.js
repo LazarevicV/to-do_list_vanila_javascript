@@ -1,7 +1,6 @@
 note_array = []
 
 if (localStorage.getItem('notes') === null) {
-  console.log('Localstorage je prazan!');
 }
 
 if (localStorage.getItem('notes') != null) {
@@ -9,14 +8,11 @@ if (localStorage.getItem('notes') != null) {
 }
 
 var all_notes_div = document.getElementById('all_notes')
-// console.log(note_array);
 
 dodaj_sve_beleske = () => {
   var brojac = 0
   for (let note of note_array) {
-    console.log(note[3]);
     date = note[2].split('-')
-    // console.log(date);
     day = date[2]
     month = date[1]
     year = date[0]
